@@ -1,24 +1,3 @@
-@keyframes expand {
-  0% {
-    width: 0;
-    height: 85%;
-  }
-
-  70% {
-    width: 50%;
-    height: 87%;
-  }
-
-  100% {
-    width: 50%;
-    height: 90%;
-  }
-}
-
-#chat {
-  animation: expand 1s ease-in-out forwards paused;
-}
-
 @keyframes fadeOut {
   0% {
     border-radius: 10px;
@@ -31,8 +10,48 @@
   }
 }
 
+#info {
+  animation: fadeOut 0.55s ease-out forwards paused;
+}
+
+@keyframes welcomeScreen {
+	0% {
+		width: 95%;
+	  height: 90%;
+	  border-radius: 10px;
+	  background-color: rgba(85, 92, 99, 0.5);
+	  top: 0;
+	}
+
+	20% {
+		width: 95%;
+	  height: 90%;
+	}
+
+	60% {
+		width: 50%;
+		height: 85%;
+	  border-radius: 10px;
+	  background-color: white;
+	  top: 0;
+	}
+
+	80% {
+		border-radius: 0;
+		top: 10%;
+	}
+
+	100% {
+		width: 50%;
+		height: 85%;
+		border-radius: 0;
+		background-color: white;
+		top: 10%;
+	}
+}
+
 #welcomeScreen {
-  animation: fadeOut 1s ease-out forwards paused;
+  animation: welcomeScreen 1.5s ease-out forwards paused;
 }
 
 @keyframes titleHeight {
