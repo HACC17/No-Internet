@@ -1,0 +1,50 @@
+@keyframes expand {
+  0% {
+    width: 0;
+    height: 85%;
+  }
+
+  70% {
+    width: 50%;
+    height: 87%;
+  }
+
+  100% {
+    width: 50%;
+    height: 90%;
+  }
+}
+
+#chat {
+  animation: expand 1s ease-in-out forwards paused;
+}
+
+@keyframes fadeOut {
+  0% {
+    border-radius: 10px;
+    opacity: 100%;
+  }
+
+  100% {
+    border-radius: 0;
+    opacity: 0;
+  }
+}
+
+#welcomeScreen {
+  animation: fadeOut 1s ease-out forwards paused;
+}
+
+@keyframes titleHeight {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 50px;
+  }
+}
+
+#daizzy {
+  animation: titleHeight 1s ease-out forwards paused;
+}

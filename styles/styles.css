@@ -1,4 +1,98 @@
+html, body {
+    height: 100%;
+}
+
 body {
-	background-color: blue;
-	text-decoration-color: green;
+    position: relative;
+    background: url('../images/background.jpg') 0 0 / cover no-repeat fixed;
+}
+
+#navigation ul li {
+    display: inline;
+    margin-left: 5%;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+#welcomeScreen {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 95%;
+    height: 90%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(85, 92, 99, .5);
+}
+
+#info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+    border-radius: inherit;
+    background-color: rgba(85, 92, 99, .5);
+}
+
+#info h2 span {
+    font-size: 16px;
+    font-style: italic;
+}
+
+#startBtn {
+    line-height: 30px;
+    width: 210px;
+    height: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    transition: .25s;
+    border-radius: 10px;
+    background-color: rgba(0, 105, 132, .5);
+}
+
+#startBtn:hover {
+    font-size: 16.5px;
+    transition: .25s;
+    transform: scale(.98, .98);
+}
+
+#chat {
+    position: absolute;
+    z-index: 0;
+    top: 10%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transition: 1s;
+    background-color: white;
+}
+
+#daizzy {
+    font-size: 30px;
+    line-height: 50px;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    text-align: center;
+    background-color: rgba(0, 105, 132, .5);
 }

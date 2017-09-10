@@ -2,11 +2,38 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>No-Internet</title>
+	<title>Daizzy The Chatbot</title>
+  <link rel="stylesheet" href="styles/styles.css"></link>
+  <link rel="stylesheet" href="styles/animations.css"></link>
 </head>
-<link rel="stylesheet" href="styles/styles.css"></link>
 <body>
-	<div class="container">Stuff</div>
+ 	<nav id="navigation">
+ 		<ul>
+ 			<li>
+ 				<a href="http://elections.hawaii.gov/voters/volunteer/">Volunteer Website</a>
+ 			</li>
+			<li>
+				<a href="#">About the Developers</a>
+			</li>
+ 		</ul>
+ 	</nav>
+
+	<div id="container">
+		<div id="welcomeScreen">
+				<div id="info">
+					<h2>Say Hello To Daizzy<br/><span>Your Personal Chatbot For Scheduling</span></h2>
+					<h3>Daizzy can help schedule volunteer dates, organize events, remind you of upcoming dates, fix conflicts, relay your volunteer information</h3>
+					<div id="startBtn" onclick="start();">Start Scheduling with Daizzy</div>
+				</div>
+		</div>
+
+		<div id="chat">
+		  <div id="daizzy">
+		  	<span>Daizzy The Chatbot</span>
+		  </div>
+		</div>	
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="app.js"></script>
 </body>
-<script src="app.js"></script>
 </html>
