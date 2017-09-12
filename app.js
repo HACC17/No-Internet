@@ -13,3 +13,19 @@ function start() {
 
   setTimeout(() => {$('#chatTitle')[0].style.animationPlayState = "running";}, 2200);
 }
+
+$(document).keypress(function(e) { //checks when user presses enter key
+  if (e.which == 13) {
+    addText();
+  }
+});
+
+function addText(){//adds text from the textbox to the chatbox
+	console.log("clicked")
+	var userText = document.createElement("div");
+    userText.className = "user";
+    var text = document.createElement("p");
+    text.innerHTML = "<b>You: </b>"+document.getElementById("input").value
+    userText.appendChild(text);
+    document.getElementById("chatLog").appendChild(userText);
+}

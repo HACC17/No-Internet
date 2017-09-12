@@ -89,10 +89,23 @@ a {
 #daizzy {
   font-size: 30px;
   line-height: 50px;
-  position: absolute;
   overflow: hidden;
   width: 100%;
   height: 0;
   text-align: center;
   background-color: #007E9F;
+}
+#chatLog{
+  width: 100%;
+  height: 85%;
+  padding: 10px;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
