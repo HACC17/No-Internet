@@ -15,39 +15,39 @@
 }
 
 @keyframes welcomeScreen {
-	0% {
-		width: 95%;
-	  height: 90%;
-	  border-radius: 10px;
-	  background-color: rgba(85, 92, 99, 0.5);
-	  top: 0;
-	}
+  0% {
+    width: 95%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: rgba(85, 92, 99, 0.5);
+    top: 0;
+  }
 
-	20% {
-		width: 95%;
-	  height: 90%;
-	}
+  20% {
+    width: 95%;
+    height: 90%;
+  }
 
-	60% {
-		width: 50%;
-		height: 85%;
-	  border-radius: 10px;
-	  background-color: white;
-	  top: 0;
-	}
+  60% {
+    width: 50%;
+    height: 85%;
+    border-radius: 10px;
+    background-color: white;
+    top: 0;
+  }
 
-	80% {
-		border-radius: 0;
-		top: 10%;
-	}
+  80% {
+    border-radius: 0;
+    top: 10%;
+  }
 
-	100% {
-		width: 50%;
-		height: 85%;
-		border-radius: 0;
-		background-color: white;
-		top: 10%;
-	}
+  100% {
+    width: 50%;
+    height: 85%;
+    border-radius: 0;
+    background-color: white;
+    top: 10%;
+  }
 }
 
 #welcomeScreen {
@@ -91,5 +91,19 @@
 }
 
 #chatTitle {
-	animation: bounce 0.75s linear forwards paused;
+  animation: bounce 0.75s linear forwards paused;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+#chatLog, #input {
+  animation: fadeIn 1s ease-out forwards paused;
 }

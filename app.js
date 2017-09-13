@@ -12,6 +12,9 @@ function start() {
 	}, 1730); //makes welcome screen invisible (display: none doe snot work within keyframes)
 
   setTimeout(() => {$('#chatTitle')[0].style.animationPlayState = "running";}, 2200);
+	setTimeout(() => {$('#chatLog')[0].style.animationPlayState = "running";}, 2700);
+	setTimeout(() => {$('#input')[0].style.animationPlayState = "running";}, 3000);
+
 }
 
 $(document).keypress(function(e) { //checks when user presses enter key
@@ -21,11 +24,18 @@ $(document).keypress(function(e) { //checks when user presses enter key
 });
 
 function addText(){//adds text from the textbox to the chatbox
-	console.log("clicked")
+	//console.log("clicked")
 	var userText = document.createElement("div");
-    userText.className = "user";
-    var text = document.createElement("p");
-    text.innerHTML = "<b>You: </b>"+document.getElementById("input").value
-    userText.appendChild(text);
-    document.getElementById("chatLog").appendChild(userText);
+  userText.className = "user";
+  
+  var text = document.createElement("p");
+  text.innerHTML = "<b>You: </b>"+ $('#input')[0].value;
+  
+  userText.appendChild(text);
+  $('#chatLog')[0].appendChild(userText);
+  $('#input')[0].value = ''; //clears textboxt after enter
+  
+  let userDivs = $('.user');
+  userDivs.map((index) => userDivs[index].style.textAlign = 'right'); //sets text to right of div
+
 }
