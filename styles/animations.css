@@ -38,7 +38,7 @@
 
   80% {
     border-radius: 0;
-    top: 10%;
+    top: 5%;
   }
 
   100% {
@@ -106,8 +106,4 @@
 
 #chatLog, #input {
   animation: fadeIn 1s ease-out forwards paused;
-}
-
-#content {
-  background-color: #ADD8E6;
 }
