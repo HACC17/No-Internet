@@ -33,6 +33,7 @@ function addText(){//adds text from the textbox to the chatbox
   
   userText.appendChild(text);
   $('#chatLog')[0].appendChild(userText);
+  $(userText).hide().fadeIn(400); //fades user's input in
   $('#input')[0].value = ''; //clears textboxt after enter
   
   let userDivs = $('.user');
