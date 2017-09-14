@@ -38,6 +38,6 @@ function addText(){//adds text from the textbox to the chatbox
   let userDivs = $('.user');
   userDivs.map((index) => userDivs[index].style.textAlign = 'right');
   var objDiv = document.getElementById("chatLog");
-	objDiv.scrollTop = objDiv.scrollHeight;
+  objDiv.scrollTop = objDiv.scrollHeight;
 
 }
