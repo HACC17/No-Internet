@@ -107,3 +107,7 @@
 #chatLog, #input {
   animation: fadeIn 1s ease-out forwards paused;
 }
+
+#content {
+  background-color: #ADD8E6;
+}
