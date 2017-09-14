@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Open About Us in new tab
 function openInNewTab(url) {
   var win = window.open(url, '_blank');
@@ -19,6 +20,8 @@ System.out.println(calendar.getSummary());
 
 
 
+=======
+>>>>>>> c1b5dd448a47b4fb8f536b3d15f7524ce52ac85f
 function start() {
 	//$('chat')[0] is equivalent to document.getElementById('chat')
 	//the "[0]" is needed as jQuery returns the DOM element in an array
