@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Google Calendar API Quickstart</title>
-    <meta charset='utf-8' />
-  </head>
-  <body>
-    <p>Google Calendar API Quickstart</p>
-
-    <!--Add buttons to initiate auth sequence and sign out-->
-    <button id="authorize-button">Events</button>
-    <button id="signout-button">Sign Out</button>
-
-    <pre id="content"></pre>
-
-    <script type="text/javascript">
+     console.log("calendar");
       // Client ID and API key from the Developer Console
       var CLIENT_ID = '365997196332-m4ujgu7nm7pjqh71kkvfka0cilabb0rm.apps.googleusercontent.com';
 
@@ -126,12 +111,3 @@
           }
         });
       }
-
-    </script>
-
-    <script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
-  </body>
-</html>
