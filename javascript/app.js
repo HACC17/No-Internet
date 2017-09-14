@@ -14,6 +14,7 @@ function start() {
   setTimeout(() => {$('#chatTitle')[0].style.animationPlayState = "running";}, 2200);
 	setTimeout(() => {$('#chatLog')[0].style.animationPlayState = "running";}, 2700);
 	setTimeout(() => {$('#input')[0].style.animationPlayState = "running";}, 3000);
+  setTimeout(() => {$('#calendar')[0].style.animationPlayState = "running";}, 3000);
 
 }
 
@@ -37,7 +38,7 @@ function addText(){//adds text from the textbox to the chatbox
   $('#input')[0].value = ''; //clears textboxt after enter
   
   let userDivs = $('.user');
-  userDivs.map((index) => userDivs[index].style.textAlign = 'left'); //sets text to right of div
+  userDivs.map((index) => userDivs[index].style.textAlign = 'left'); //sets text to left of div
   var objDiv = document.getElementById("chatLog");
 	objDiv.scrollTop = objDiv.scrollHeight;
 
