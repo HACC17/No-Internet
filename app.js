@@ -36,6 +36,8 @@ function addText(){//adds text from the textbox to the chatbox
   $('#input')[0].value = ''; //clears textboxt after enter
   
   let userDivs = $('.user');
-  userDivs.map((index) => userDivs[index].style.textAlign = 'right'); //sets text to right of div
+  userDivs.map((index) => userDivs[index].style.textAlign = 'right');
+  var objDiv = document.getElementById("chatLog");
+	objDiv.scrollTop = objDiv.scrollHeight;
 
 }
