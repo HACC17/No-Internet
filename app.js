@@ -1,3 +1,11 @@
+// Open About Us in new tab
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+  console.log('test');
+}
+
+
 // Initialize Calendar service with valid OAuth credentials
 Calendar service = new Calendar.Builder(httpTransport, jsonFactory, credentials)
     .setApplicationName("applicationName").build();
