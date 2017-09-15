@@ -110,7 +110,7 @@ a {
 input[type = text], select {
   font-size: 16px;
   position: absolute;
-  bottom: 0;
+  bottom: -8px;
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
@@ -146,7 +146,8 @@ input[type = text], select {
   border-color: #006480;   
   font-family: 'Josefin Sans', sans-serif;
   padding: 15px 20px;
-  margin-left: 45%;
+  margin-bottom: 10px;
+  width: 39%;
 }
 
 #calTitle {
@@ -157,6 +158,8 @@ input[type = text], select {
   box-sizing: border-box;
   padding: 15px 20px;
   margin: 20px;
+  width: 80%;
+}
 
 .bot {
 	position: relative;
