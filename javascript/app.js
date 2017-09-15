@@ -50,22 +50,52 @@ function addText(){//adds text from the textbox to the chatbox
   
   let userDivs = $('.user');
   userDivs.map((index) => userDivs[index].style.textAlign = 'left'); //sets text to left of div
-  var objDiv = document.getElementById("chatLog");
-  objDiv.scrollTop = objDiv.scrollHeight;
 
   if (qNum ===0){
-    console.log("first")
-    console.log($('#input')[0].value.toLowerCase());
-    if ($('#input')[0].value.toLowerCase().includes("yes")){
-      console.log("worked");
+    if ($('#input')[0].value.toLowerCase().includes("yea")||$('#input')[0].value.toLowerCase().includes("yes")||$('#input')[0].value.toLowerCase().includes("yeah")){//check if user responds with yes
       botText("May I please have your name?");
       qNum =1;
     }
   }
   else if (qNum ===1){
     name = $('#input')[0].value;
-    botText("What role are you looking to volunteer for, "+name+"?");
+    var listRoles = "";
+    for (var i = 0; i < roles.length; i++) {
+      listRoles += "<br> -"+ roles[i].toLowerCase();
+    }
+    botText("What role are you looking to volunteer for, "+name+"?<br><br>Current available roles:"+listRoles);
+    qNum =2;
+  }
+  else if( qNum ===2){
+    if ($('#input')[0].value.toLowerCase() === roles[0].toLowerCase()){
+      botText("wow");
+    }
+    else if ($('#input')[0].value.toLowerCase() === roles[1].toLowerCase()){
+
+    }
+    else if ($('#input')[0].value.toLowerCase() === roles[2].toLowerCase()){
+
+    }
+    else if ($('#input')[0].value.toLowerCase() === roles[3].toLowerCase()){
+
+    }
+    else if ($('#input')[0].value.toLowerCase() === roles[4].toLowerCase()){
+
+    }
+    else if ($('#input')[0].value.toLowerCase() === roles[5].toLowerCase()){
+
+    }
+    else if ($('#input')[0].value.toLowerCase() === roles[6].toLowerCase()){
+
+    }
+    else{
+      botText("That volunter role does not exist. Please try again");
+    }
+
   }
     $('#input')[0].value = ''; //clears textboxt after enter
+    var objDiv = document.getElementById("chatLog");
+  objDiv.scrollTop = objDiv.scrollHeight;
 }
 var name = "";
+var roles = ["CONTROL CENTER OPERATOR", "COUNTING CENTER OFFICIAL", "DELIVERY/COLLECTION OFFICIAL", "ELECTION INFORMATION SERVICES OFFICIAL","FACILITY OFFICIAL","PRECINCT OFFICIAL","PRECINCT TROUBLESHOOTER"];
