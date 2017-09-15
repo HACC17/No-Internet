@@ -1,50 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Daizzy The Chatbot</title>
+  <meta charset="UTF-8">
+  <title>Daizzy The Chatbot</title>
   <link rel="stylesheet" href="styles/styles.css"></link>
   <link rel="stylesheet" href="styles/animations.css"></link>
 
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 </head>
 <body>
- 	<nav id="navigation">
- 		<ul>
- 			<li>
- 				<a href="http://elections.hawaii.gov/voters/volunteer/">Volunteer Website</a>
- 			</li>
-			<li>
-				<a href="#">About the Developers</a>
-			</li>
- 		</ul>
- 	</nav>
+  <nav id="navigation">
+    <ul>
+      <li>
+        <a href="http://elections.hawaii.gov/voters/volunteer/">Volunteer Website</a>
+      </li>
+      <li>
+        <a href="html/about.html" target="_blank">About the Developers</a>
+      </li>
+    </ul>
+  </nav>
 
-	<div id="container">
-		<div id="welcomeScreen">
-				<div id="info">
-					<h2>Say Hello To Daizzy<br/><span>Your Personal Chatbot For Scheduling</span></h2>
-					<h3>Daizzy can help schedule volunteer dates, organize events, remind you of upcoming dates, fix conflicts, relay your volunteer information</h3>
-					<div id="startBtn" onclick="start();">Start Scheduling with Daizzy</div>
-				</div>
-		</div>
+  <div id="container">
+    <div id="welcomeScreen">
+        <div id="info">
+          <h2>Say Hello To Daizzy<br/><span>Your Personal Chatbot For Scheduling</span></h2>
+          <h3>Daizzy can help schedule volunteer dates, organize events, remind you of upcoming dates, fix conflicts, relay your volunteer information</h3>
+          <div id="startBtn" onclick="start();">Start Scheduling with Daizzy</div>
+        </div>
+    </div>
 
-		<div id="chat">
-		  <div id="daizzy">
-		  	<div id="chatTitle">Daizzy The Chatbot</div>
-		  </div>
-
-		  <div id="chatLog">
-		  	<div class="bot">
-		  		<p class="chatMessage"><b>Daizzy:</b> Hi!</p>
-		  		<p class="chatMessage"><b>Daizzy:</b> My name is Daizzy and I'll be here to help you schedule your____!</p>
-		  		<p class="chatMessage"><b>Daizzy:</b> Is this your first time signing up?</p>
-		  	</div>
-		  </div>
+    <div id="chat">
+      <div id="daizzy">
+        <div id="chatTitle">Daizzy The Chatbot</div>
+      </div>
+      <div id="chatLog">
+        <div class="bot">
+          <p class="chatMessage"><b>Daizzy:</b> Hey there! Would you like to sign up to volunteer?</p>
+        </div>
+      </div>
       <input type="text" id="input" value="">
-		</div>	
-	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="app.js"></script>
+    </div>  
+  </div>
+
+  <!--Add buttons to initiate auth sequence and sign out-->
+  <div id="calendar">
+    <p id="calTitle">Google Calendar Quickstart</p>
+    <button id="authorize-button">Events</button>
+    <button id="signout-button">Sign Out</button>
+    <pre id="content"></pre>
+  </div>
+    
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="javascript/app.js"></script>
+  <script src="javascript/calendar.js"></script>
+
+  <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
 </body>
 </html>
