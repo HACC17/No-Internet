@@ -1,8 +1,59 @@
+html, body {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100%;
+}
+
+#navigation {
+	width:100%;
+	height: 50px;
+	background-color: #69B3DB;
+	display: flex;
+  	align-content: center;	
+}
+
+#navigation ul li {
+  display: inline;
+  margin-left: 5%;
+  list-style: none;
+  color: white;
+}
+
+a {
+	text-decoration: none;
+}
+
 #school-logo {
 	height: 14em;
 	width: 14em;
+	justify-content: center;
 }
 
 #container {
 	justify-content: center;
+}
+
+#profile-container {
+	display:flex;
+	flex-flow: column;
+	width: 100%;
+	height: 100%;
+}
+
+#row-one, #row-two {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.profile {
+	flex-direction: column;
+	text-align: center;
+	width:15em;
+}
+
+.circle {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	background-color: #C9B7AD;
 }
