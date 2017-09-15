@@ -23,10 +23,10 @@ $(document).keypress(function(e) { //checks when user presses enter key
     addText();
   }
 });
-var qNum = 0;
+var qNum = 0; //question number
 var questions = ["May I please have your name?","What role are you looking to volunteer for?"];
 
-function botText(input){
+function botText(input) {
   var userText = document.createElement("div");
   userText.className = "bot";
   var text = document.createElement("p");
@@ -34,10 +34,10 @@ function botText(input){
   text.innerHTML = "<b>Daizzy: </b>"+ input;
   userText.appendChild(text);
   $('#chatLog')[0].appendChild(userText);
-  $(userText).hide().fadeIn(400); //fades user's input in
+  $(userText).hide().delay(800).fadeIn(400); //fades user's input in
 }
 
-function addText(){//adds text from the textbox to the chatbox
+function addText() {//adds text from the textbox to the chatbox
 	var userText = document.createElement("div");
   userText.className = "user";
   var text = document.createElement("p");
@@ -51,50 +51,50 @@ function addText(){//adds text from the textbox to the chatbox
   let userDivs = $('.user');
   userDivs.map((index) => userDivs[index].style.textAlign = 'left'); //sets text to left of div
 
-  if (qNum ===0){
-    if ($('#input')[0].value.toLowerCase().includes("yea")||$('#input')[0].value.toLowerCase().includes("yes")||$('#input')[0].value.toLowerCase().includes("yeah")){//check if user responds with yes
+  if (qNum === 0) {
+    let userInput = $('#input')[0].value.toLowerCase()
+    if(userInput.includes("yea") || userInput.includes("yes") || userInput.includes("yeah") || userInput.includes("sure")) {//check if user responds with yes
       botText("May I please have your name?");
-      qNum =1;
+      qNum = 1;
+    }else{
+      botText('Sorry I didn\'t quite get that, try answering again with the keywords, "Yes" or "Sure".');
     }
-  }
-  else if (qNum ===1){
+  }else if(qNum === 1) {
     name = $('#input')[0].value;
     var listRoles = "";
-    for (var i = 0; i < roles.length; i++) {
+    /*for (var i = 0; i < roles.length; i++) {
       listRoles += "<br> -"+ roles[i].toLowerCase();
-    }
+    }*/
+    //use map instead
+
+    //ADD conditional in here to check if their name is right
+    roles.map((currVal, index) => listRoles += "<br> -" + roles[index].toLowerCase());
     botText("What role are you looking to volunteer for, "+name+"?<br><br>Current available roles:"+listRoles);
-    qNum =2;
-  }
-  else if( qNum ===2){
+    qNum = 2;
+  }else if(qNum === 2) {
     if ($('#input')[0].value.toLowerCase() === roles[0].toLowerCase()){
       botText("wow");
-    }
-    else if ($('#input')[0].value.toLowerCase() === roles[1].toLowerCase()){
+    }else if ($('#input')[0].value.toLowerCase() === roles[1].toLowerCase()){
 
-    }
-    else if ($('#input')[0].value.toLowerCase() === roles[2].toLowerCase()){
+    }else if ($('#input')[0].value.toLowerCase() === roles[2].toLowerCase()){
 
-    }
-    else if ($('#input')[0].value.toLowerCase() === roles[3].toLowerCase()){
+    }else if ($('#input')[0].value.toLowerCase() === roles[3].toLowerCase()){
 
-    }
-    else if ($('#input')[0].value.toLowerCase() === roles[4].toLowerCase()){
+    }else if ($('#input')[0].value.toLowerCase() === roles[4].toLowerCase()){
 
-    }
-    else if ($('#input')[0].value.toLowerCase() === roles[5].toLowerCase()){
+    }else if ($('#input')[0].value.toLowerCase() === roles[5].toLowerCase()){
 
-    }
-    else if ($('#input')[0].value.toLowerCase() === roles[6].toLowerCase()){
+    }else if ($('#input')[0].value.toLowerCase() === roles[6].toLowerCase()){
 
-    }
-    else{
+    }else{
       botText("That volunter role does not exist. Please try again");
     }
+  }else if(qNum === 3){
 
   }
-    $('#input')[0].value = ''; //clears textboxt after enter
-    var objDiv = document.getElementById("chatLog");
+
+  $('#input')[0].value = ''; //clears textboxt after enter
+  var objDiv = document.getElementById("chatLog");
   objDiv.scrollTop = objDiv.scrollHeight;
 }
 var name = "";

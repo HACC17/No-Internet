@@ -99,10 +99,9 @@ a {
 
 #chatLog {
   box-sizing: border-box;
-  width: 100%;
+  width: 99.9%;
   height: 90%;
   padding: 20px;
-  max-height: 510px;
   overflow: scroll;
   overflow-x: hidden;
 }
