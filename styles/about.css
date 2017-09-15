@@ -6,14 +6,14 @@ html, body {
 }
 
 body {
-	background-color: #BED0E0;
+	background-color: #FCFDFF;
 }
 
 #navigation {
 	width:100%;
 	height: 50px;
 	margin-bottom: 10px;
-	background-color: #09253D;	/* <- navy blue | med blue -> #69B3DB*/
+	background-color: #0D3B66;	/* <- navy blue | med blue -> #69B3DB*/
 	display: flex;
   	align-content: center;	
 }
@@ -35,7 +35,7 @@ a {
 	height: 14em;
 	width: 14em;
 	border-radius: 50%;
-	
+	background-color: #FFF159;
 	display: block;
 	margin: 0 auto;
 }
