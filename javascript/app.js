@@ -25,6 +25,14 @@ $(document).keypress(function(e) { //checks when user presses enter key
 });
 var qNum = 0; //question number
 var questions = ["May I please have your name?","What role are you looking to volunteer for?"];
+var explanations = [
+"This role responds to telephone inquiries and request from polling places using a computer-based call center system. Duties include entering information, determining solutions, and resolving problems. Stipend: $85",
+"This role processes, tabulates, and disseminates election results in an accurate and timely manner. Consist of nine (9) teams. Stipend: $85-95",
+"This role delivers ballots and election supplies to the polling places on election morning. Collects voted ballots and election supplies after the polls have closed on election day. Each team consist of two members. Stipend: $50 – $95",
+"This role responds to general inquiries from the public and forwards special circumstances to appropriate officials. Stipend: $85",
+"This role sets up election equipment at polling places on election eve. Provides access to polling places on election day. Disassembles and stores the election equipment after the polls close on election day. Stipend: $60 – $140",
+"This role assists voters at the polling place while ensuring the integrity of the voting process. Precinct Officials operate the Information and Ballot Demonstration Station, Poll Book Station, Ballot Box Station, and eSlate Station. Stipend: $5 – $175",
+"This role Monitors the polling places to ensure Officials are following standard operating procedures; and replenishes supplies as necessary. Must have a valid driver’s license."];
 
 function botText(input) {
   var userText = document.createElement("div");
@@ -73,19 +81,19 @@ function addText() {//adds text from the textbox to the chatbox
     qNum = 2;
   }else if(qNum === 2) {
     if ($('#input')[0].value.toLowerCase() === roles[0].toLowerCase()){
-      botText("wow");
+      botText(explanations[0]);
     }else if ($('#input')[0].value.toLowerCase() === roles[1].toLowerCase()){
-
+      botText(explanations[1]);
     }else if ($('#input')[0].value.toLowerCase() === roles[2].toLowerCase()){
-
+      botText(explanations[2]);
     }else if ($('#input')[0].value.toLowerCase() === roles[3].toLowerCase()){
-
+      botText(explanations[3]);
     }else if ($('#input')[0].value.toLowerCase() === roles[4].toLowerCase()){
-
+      botText(explanations[4]);
     }else if ($('#input')[0].value.toLowerCase() === roles[5].toLowerCase()){
-
+      botText(explanations[5]);
     }else if ($('#input')[0].value.toLowerCase() === roles[6].toLowerCase()){
-
+      botText(explanations[6]);
     }else{
       botText("That volunter role does not exist. Please try again");
     }
