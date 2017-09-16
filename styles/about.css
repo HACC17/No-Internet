@@ -26,9 +26,12 @@ body {
   align-content: center;
 }
 
+#backToChat a{
+	color: white;
+}
+
 a {
 	text-decoration: none;
-	color: white;
 }
 
 #school-logo {
@@ -64,9 +67,31 @@ a {
 	width:15em;
 }
 
+.profile h4 a{
+	color: black;
+}
+
+.profile ul{
+	list-style: none;
+	padding: 0;
+	list-style-type: none;
+}
+
+.profile ul li {
+	margin-bottom: 5px;
+}
+
 .circle {
 	height: 200px;
 	width: 200px;
 	border-radius: 50%;
 	background-color: #C9B7AD;
+	transition: 0.3s;
+}
+
+.circle:hover {
+	border-radius: 40%;
+	border: 5px white solid;
+	box-sizing: border-box;
+	transition: 0.5s;
 }
