@@ -1,22 +1,60 @@
 html, body {
   font-family: 'Josefin Sans', sans-serif;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   position: relative;
+  top: -16px;
   background: url('../images/background.jpg') 0 0 / cover no-repeat fixed;
 }
 
+#navigation {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #344251;
+  display: block;
+}
+
+#navigation ul {
+  box-sizing: border-box;
+  height: 40px;
+}
+
 #navigation ul li {
-  display: inline;
-  margin-left: 5%;
+  display: inline-block;
+  margin-left: 6%;
   list-style: none;
+  height: 40px;
+}
+
+#navigation ul li:hover {
+  animation: pulse 1s infinite;
 }
 
 a {
   text-decoration: none;
   color: white;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: #9CBEBF;
+}
+
+#gitIcon {
+  width: 30px;
+  height: 30px;
+  margin-left: 50%;
+  margin-right: 5%;
+  vertical-align: middle;
+}
+
+#gitIcon:hover {
+  animation: flip 0.7s forwards;
 }
 
 #container {
@@ -32,6 +70,7 @@ a {
   bottom: 0;
   left: 0;
   margin: auto;
+  margin-top: 8%;
 }
 
 #info {
@@ -55,26 +94,33 @@ a {
 }
 
 #startBtn {
-  line-height: 30px;
-  width: 230px;
-  height: 30px;
+  line-height: 40px;
+  font-size: 17px;
+  width: 43%;
+  height: 40px;
   margin-right: auto;
   margin-left: auto;
+  color: #CCCCCC;
   transition: 0.25s;
-  border-radius: 10px;
   background-color: rgba(0, 105, 132, 0.5);
+  outline: 5px solid rgba(0, 82, 102, 0.9);
+  outline-offset: -5px;
 }
 
 #startBtn:hover {
-  font-size: 16.5px;
+  font-size: 16px;
+  line-height: 43px;
+  background-color: rgba(0, 122, 153, 0.7);
+  outline: 8px solid rgba(0, 82, 102, 0.9);
+  outline-offset: -8px;
+  color: white;
   transition: 0.25s;
-  transform: scale(0.98, 0.98);
 }
 
 #chat {
   position: absolute;
   z-index: 0;
-  top: 5%;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -82,6 +128,7 @@ a {
   width: 50%;
   height: 85%;
   margin: auto;
+  margin-top: 8%;
   transition: 1s;
   background-color: white;
 }

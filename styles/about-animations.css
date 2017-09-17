@@ -15,8 +15,12 @@
 }
 
 #backToChat:hover {
-	color: #9CBEBF;
 	animation: pulse 1s infinite;
+}
+
+#backToChat a:hover {
+  color: #9CBEBF;
+  transition: 0.3s;
 }
 
 .profile h4:hover {

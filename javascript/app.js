@@ -55,7 +55,7 @@ function addText() {//adds text from the textbox to the chatbox
   userDivs.map((index) => userDivs[index].style.textAlign = 'left'); //sets text to left of div
 
   if(qNum === 0) {
-    volunteers.push(new Volunteer(null,null,null));
+    volunteers.push(new Volunteer(null, null, null));
     let userInput = $('#input')[0].value.toLowerCase();
     if(userInput.includes("yea") || userInput.includes("yes") || userInput.includes("yeah") || userInput.includes("sure")) {//check if user responds with yes
       botText("May I please have your name?");
