@@ -62,6 +62,23 @@
   animation: fadeOut 0.55s ease-out forwards paused;
 }
 
+@keyframes spinOnce {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*daisy rotates when mouse hovers button*/
+#startBtn:hover + #daisy {
+  animation: spinOnce 0.9s ease-in-out ;
+  
+}
+
 @keyframes welcomeScreen {
   0% {
     width: 95%;
