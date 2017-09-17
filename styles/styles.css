@@ -281,6 +281,9 @@ input[type = text], select {
   margin-bottom: 2%;
   text-align: center;
 }
+#signout-button {
+  margin-left: 30%;
+}
 
 #authorize-button, #signout-button {
   background-color: #06C5FB;
@@ -300,6 +303,21 @@ input[type = text], select {
   padding: 15px 20px;
   margin: 20px;
   width: 80%;
+}
+
+.bot {
+	position: relative;
+	background: #344251;
+	color: white;
+	border-radius: .4em;
+	padding: 15px;
+	width: 60%;
+	margin-right: auto;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+	overflow: auto;
+	word-wrap: break-word;
+	text-align: left;
 }
 
 /*Simple Media Queries*/

@@ -55,14 +55,14 @@ function updateSigninStatus(isSignedIn) {
 /**
  *  Sign in the user upon button click.
  */
-function handleAuthClick(event2) {
+function handleAuthClick(event) {
   gapi.auth2.getAuthInstance().signIn();
 }
 
 /**
  *  Sign out the user upon button click.
  */
-function handleSignoutClick(event2) {
+function handleSignoutClick(event) {
   gapi.auth2.getAuthInstance().signOut();
 }
 
