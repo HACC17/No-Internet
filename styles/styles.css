@@ -17,6 +17,7 @@ body {
   line-height: 50px;
   background-color: #344251;
   display: block;
+  position: relative;
 }
 
 #navigation ul {
@@ -70,7 +71,6 @@ a:hover {
   left: 0;
   margin: auto;
   margin-top: 8%;
-  display: none;
 }
 
 #daisy {
@@ -90,12 +90,15 @@ a:hover {
   padding: 15px;
   text-align: center;
   border-radius: inherit;
-  background-color: rgba(85, 92, 99, 0.5);
+  background-color: rgba(131, 140, 149, 0.7);
+  color: #344251;
 }
 
-#info h2 span {
-  font-size: 16px;
-  font-style: italic;
+#info h3 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color:  #323f4e;
 }
 
 #startBtn {

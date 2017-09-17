@@ -43,8 +43,13 @@
 
     <div id="welcomeScreen">
         <div id="info">
-          <h2>Say Hello to Daizzy!<br/><span>The Election Volunteer Helper</span></h2>
-          <h3>Daizzy can help you get started as an election volunteer. Talk to Daizzy to sign up, schedule a training session, and more.</h3>
+          <h2>
+            Say Hello to <span style="color: white">Daizz</span><span style="color: #FBD676">y</span>!
+            <br/>
+            <span style="font-size: 16.5px; font-style: italic; color: #babfc4;">The Election Volunteer Helper</span>
+            <hr/>
+          </h2>
+          <h3>Created by a few highschool students, Daizzy can help you get started as an election volunteer without the hassle! Talk to Daizzy the Chatbot to sign up, schedule a training session, and more.</h3>
           <div id="startBtn" onclick="start();">Start Scheduling with Daizzy</div>
           <img id="daisy" src="images/daisy.png">
         </div>
@@ -76,12 +81,6 @@
   <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
-  </script>
-  <script language="javascript">
-    $(document).ready(function() {
-      console.log("page has loaded");
-      $('div#welcomeScreen').fadeIn(2000);
-    });
   </script>
 </body>
 </html>

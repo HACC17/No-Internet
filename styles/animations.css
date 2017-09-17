@@ -45,6 +45,19 @@
   animation-name: flip;
 }
 
+@keyframes navIn {
+  0% {
+    top: -50px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+#navigation {
+  animation: navIn 0.9s ease-in-out forwards paused;
+}
 
 @keyframes fadeOut {
   0% {

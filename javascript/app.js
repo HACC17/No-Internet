@@ -1,3 +1,9 @@
+$(document).ready(function() {
+  console.log($('#welcomeScreen'));
+  $('#welcomeScreen').hide().delay(200).fadeIn(1000);
+  setTimeout(() => { $('#navigation')[0].style.animationPlayState = "running";}, 500);
+});
+
 function start() {
   //$('chat')[0] is equivalent to document.getElementById('chat')
   //the "[0]" is needed as jQuery returns the DOM element in an array
@@ -41,7 +47,6 @@ function botText(input) {
 }
 
 function addText() {//adds text from the textbox to the chatbox
-  setTimeout(() => {openOverlay();}, 1000);
   var userText = document.createElement("div");
   userText.className = "user";
   var text = document.createElement("p");
