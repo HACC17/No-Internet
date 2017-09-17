@@ -90,29 +90,48 @@ function addText() {//adds text from the textbox to the chatbox
     }  
   }else if(qNum === 3) {
     if ($('#input')[0].value.toLowerCase() === roles[0].toLowerCase()){
-      botText("wow");
+      botText("Are you sure you want to take the role of " + roles[0].toLowerCase() + "?");
+      qNum =4;
     }else if ($('#input')[0].value.toLowerCase() === roles[1].toLowerCase()){
-      volunteers[0]._role =$('#input')[0].value.toLowerCase();
-
+      volunteers[0]._role = $('#input')[0].value.toLowerCase();
+      botText("Are you sure you want to take the volunteer position of " + roles[1].toLowerCase() + "?");
+      qNum =4;
     }else if ($('#input')[0].value.toLowerCase() === roles[2].toLowerCase()){
-      volunteers[0]._role =$('#input')[0].value.toLowerCase();
-
+      volunteers[0]._role = $('#input')[0].value.toLowerCase();
+      botText("Are you sure you want to take the volunteer position of " + roles[2].toLowerCase() + "?");
+      qNum =4;
     }else if ($('#input')[0].value.toLowerCase() === roles[3].toLowerCase()){
-      volunteers[0]._role =$('#input')[0].value.toLowerCase();
-
+      volunteers[0]._role = $('#input')[0].value.toLowerCase();
+      botText("Are you sure you want to take the volunteer position of " + roles[3].toLowerCase() + "?");
+      qNum =4;
     }else if ($('#input')[0].value.toLowerCase() === roles[4].toLowerCase()){
-      volunteers[0]._role =$('#input')[0].value.toLowerCase();
-
+      volunteers[0]._role = $('#input')[0].value.toLowerCase();
+      botText("Are you sure you want to take the volunteer position of " + roles[4].toLowerCase() + "?");
+      qNum =4;
     }else if ($('#input')[0].value.toLowerCase() === roles[5].toLowerCase()){
-      volunteers[0]._role =$('#input')[0].value.toLowerCase();
-
+      volunteers[0]._role = $('#input')[0].value.toLowerCase();
+      botText("Are you sure you want to take the volunteer position of " + roles[5].toLowerCase() + "?");
+      qNum =4;
     }else if ($('#input')[0].value.toLowerCase() === roles[6].toLowerCase()){
-      volunteers[0]._role =$('#input')[0].value.toLowerCase();
-
+      volunteers[0]._role = $('#input')[0].value.toLowerCase();
+      botText("Are you sure you want to take the volunteer position of " + roles[6].toLowerCase() + "?");
+      qNum =4;
     }else{
-      botText("That volunteer role does not exist. Please try again");
+      botText("That volunteer role does not exist. Please try again and type the role as seen above");
     }
   }else if(qNum === 4){
+    let userInput = $('#input')[0].value.toLowerCase();
+    if(userInput.includes("yea") || userInput.includes("yes") || userInput.includes("yeah") || userInput.includes("correct")){
+      botText("Here are the days we have available for that role");
+      setTimeout(() => {openOverlay();}, 1000);
+      qNum = 5;
+    }else if(userInput.includes("no") || userInput.includes("nope")){
+      qNum = 3;
+      var listRoles = "";
+      roles.map((currVal, index) => listRoles += "<br> -" + roles[index].toLowerCase());
+      botText("Plase pick a role:"+listRoles);
+    }
+  }else if(qNum === 5){
 
   }
 
@@ -122,6 +141,21 @@ function addText() {//adds text from the textbox to the chatbox
 }
 var name = "";
 var roles = ["CONTROL CENTER OPERATOR", "COUNTING CENTER OFFICIAL", "DELIVERY/COLLECTION OFFICIAL", "ELECTION INFORMATION SERVICES OFFICIAL","FACILITY OFFICIAL","PRECINCT OFFICIAL","PRECINCT TROUBLESHOOTER"];
+
+function openOverlay() {
+  $("#side-nav")[0].style.width = "40%";
+  $("#chat")[0].style.left = "40%";
+  setTimeout(() => {$('#overlayTab')[0].style.display = "none";}, 300);
+  setTimeout(() => {$('#overlayTab')[0].style.animationPlayState = "paused";}, 400);
+}
+
+function closeOverlay() {
+  $("#side-nav")[0].style.width = "0";
+  $("#chat")[0].style.left= "0";
+  $('#overlayTab')[0].style.display = "inline";
+  setTimeout(() => {$('#overlayTab')[0].style.animationPlayState = "running";}, 700);
+
+}
 
 var volunteers = [];
 

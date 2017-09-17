@@ -157,3 +157,17 @@
 #chatLog, #input {
   animation: fadeIn 1s ease-out forwards paused;
 }
+
+@keyframes overlayTab {
+  0% {
+    left: -40px;
+  }
+
+  100% {
+    left: -10px;
+  }
+}
+
+#overlayTab {
+  animation: overlayTab 0.5s ease-out paused;
+}
