@@ -235,3 +235,58 @@ input[type = text], select {
 	word-wrap: break-word;
 	text-align: left;
 }
+
+/*Simple Media Queries*/
+
+
+/* ----------- Galaxy S5 ----------- */
+    /* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+    #startBtn{
+      width: 90%;
+    }
+    #calendar{
+      width: 85%;
+    }
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+        /* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #startBtn{
+      width: 98%;
+    }
+    #calendar{
+      width: 9  5%;
+    }
+}
+
+/* ----------- iPad 3 and 4 ----------- */
+      /* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #info, #startBtn, #calTitle, #input, .chatMessage, #calTitle, #authorize-button, #signout-button, a{
+      font-size: 30px;
+    }
+    #startBtn{
+      width: 80%;
+      height: 10%;    
+    }
+    #input{
+      height: 10%;
+    }
+    #navigation{
+      height: 8%;
+    }
+    #calendar{
+      width: 70%;
+    }
+}
