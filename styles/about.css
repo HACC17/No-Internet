@@ -87,3 +87,10 @@ a {
   background-color: #C9B7AD;
   transition: 0.3s;
 }
+
+.circle:hover {
+  border-radius: 40%;
+  border: 5px white solid;
+  box-sizing: border-box;
+  transition: 0.5s;
+}

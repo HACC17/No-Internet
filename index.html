@@ -24,23 +24,28 @@
   <div id="container">
     <div id="side-nav">
       <div class="closeDiv" onclick="closeOverlay();"><div class="closeButton">&times;</div></div>
-      <div id="calendar">
-        <p id="calTitle">Google Calendar Quickstart</p>
-        <button id="authorize-button">Events</button>
-        <button id="signout-button">Sign Out</button>
-        <pre id="content"></pre>
+      
+      <div id="bothCals">
+        <iframe src="https://calendar.google.com/calendar/embed?title=Hawaii%20Volunteer%20Schedule&amp;showPrint=0&amp;height=500&amp;wkst=1&amp;bgcolor=%2333ccff&amp;src=ueue2ffv31h1ilva2o1tmuthgs%40group.calendar.google.com&amp;color=%23691426&amp;ctz=Pacific%2FHonolulu" style="border-width:0" width="100%" height="500px" frameborder="0" scrolling="no"></iframe>
+        
+        <div id="calendar2">
+          <p id="calTitle2">Your Calendar</p>
+          <button id="authorize-button2">Load Events</button>
+          <button id="signout-button2">Sign Out</button>
+          <pre id="content2"></pre>
+        </div>
       </div>
     </div>
 
-    <div id="overlayTab">
-      <img id="menu-icon" src="../images/menu-icon.png" onclick="openOverlay();">
+    <div id="overlayTab" onclick="openOverlay();">
+      <img id="menu-icon" src="../images/menu-icon.png"">
     </div>
 
     <div id="welcomeScreen">
         <div id="info">
           <h2>Say Hello to Daizzy!<br/><span>The Election Volunteer Helper</span></h2>
           <h3>Daizzy can help you get started as an election volunteer. Talk to Daizzy to sign up, schedule a training session, and more.</h3>
-          <div id="startBtn" onclick="start();">Start Conversation!</div>
+          <div id="startBtn" onclick="start();">Start Scheduling with Daizzy</div>
           <img id="daisy" src="images/daisy.png">
         </div>
     </div>
@@ -56,12 +61,17 @@
       </div>
       <input type="text" id="input" value="">
     </div>  
-
   </div> 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="javascript/app.js"></script>
   <script src="javascript/calendar.js"></script>
+  <script src="javascript/calendar2.js"></script>
+
+  <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
 
   <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
