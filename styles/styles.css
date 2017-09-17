@@ -250,6 +250,7 @@ input[type = text], select {
 
 #overlayTab:hover {
   background-color: #F2F2F2;
+  left: -7px;
   transition: 0.3s;
 }
 
