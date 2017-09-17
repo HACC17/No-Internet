@@ -121,9 +121,8 @@ input[type = text], select {
   outline: none;
 }
 
-#calendar {
+#calendar, #calendar2 {
   font-size: 16px;
-  position: absolute;
   display: inline-block;
   box-sizing: border-box;
   background-color: #007E9F;
@@ -134,22 +133,25 @@ input[type = text], select {
   bottom: 15;
   right: 0;
   left: 0;
-  width: 50%;
+  width: 45%;
   margin: auto;
   margin-bottom: 2%;
   text-align: center;
 }
 
-#authorize-button, #signout-button {
+#signout-button, #signout-button2 {
+  margin-left: 30%;
+}
+
+#authorize-button, #signout-button, #authorize-button2, #signout-button2 {
   background-color: #06C5FB;
   border-color: #006480;   
   font-family: 'Josefin Sans', sans-serif;
   padding: 15px 20px;
-  margin-bottom: 10px;
-  width: 39%;
+  width: 40%;
 }
 
-#calTitle {
+#calTitle, #calTitle2 {
   font-size: 24px;
   background-color: #06C5FB;
   position: relative;
@@ -158,6 +160,12 @@ input[type = text], select {
   padding: 15px 20px;
   margin: 20px;
   width: 80%;
+}
+
+#calContain {
+  box-sizing: border-box;
+  width: 100%;
+  height: 90%;
 }
 
 .bot {
