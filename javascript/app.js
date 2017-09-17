@@ -41,6 +41,7 @@ function botText(input) {
 }
 
 function addText() {//adds text from the textbox to the chatbox
+  setTimeout(() => {openOverlay();}, 1000);
   var userText = document.createElement("div");
   userText.className = "user";
   var text = document.createElement("p");
@@ -129,7 +130,7 @@ function addText() {//adds text from the textbox to the chatbox
       qNum = 3;
       var listRoles = "";
       roles.map((currVal, index) => listRoles += "<br> -" + roles[index].toLowerCase());
-      botText("Please pick a role:"+listRoles);
+      botText("Plase pick a role:"+listRoles);
     }
   }else if(qNum === 5){
 

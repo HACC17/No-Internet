@@ -263,61 +263,37 @@ input[type = text], select {
   transition: 0.3s;
 }
 
-#calendar {
+
+#calendar, #calendar2 {
   font-size: 16px;
-  position: absolute;
-  display: inline-block;
   box-sizing: border-box;
   background-color: #007E9F;
   font-family: 'Josefin Sans', sans-serif;
-  padding: 20px;
-  z-index: 0;
-  top: 85;
-  bottom: 15;
-  right: 0;
-  left: 0;
-  width: 100%;
-  margin: auto;
-  margin-bottom: 2%;
   text-align: center;
-}
-#signout-button {
-  margin-left: 30%;
-}
-
-#authorize-button, #signout-button {
-  background-color: #06C5FB;
-  border-color: #006480;   
-  font-family: 'Josefin Sans', sans-serif;
-  padding: 15px 20px;
-  margin-bottom: 10px;
-  width: 39%;
+  width: 100%;
+  height: 30%;
 }
 
-#calTitle {
+#calTitle, #calTitle2 {
   font-size: 24px;
   background-color: #06C5FB;
   position: relative;
+  bottom: 25px;
   display: inline-block;
   box-sizing: border-box;
   padding: 15px 20px;
-  margin: 20px;
-  width: 80%;
+  width: 100%;
 }
 
-.bot {
-	position: relative;
-	background: #344251;
-	color: white;
-	border-radius: .4em;
-	padding: 15px;
-	width: 60%;
-	margin-right: auto;
-	box-sizing: border-box;
-	margin-bottom: 15px;
-	overflow: auto;
-	word-wrap: break-word;
-	text-align: left;
+#authorize-button, #signout-button, #authorize-button2, #signout-button2 {
+  background-color: #06C5FB;
+  border-color: #006480;   
+  position: relative;
+  bottom: 15px;
+  font-family: 'Josefin Sans', sans-serif;
+  border: none;
+  padding: 15px 20px;
+  width: 40%;
 }
 
 /*Simple Media Queries*/
