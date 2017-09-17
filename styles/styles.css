@@ -72,6 +72,11 @@ a:hover {
   margin-top: 8%;
 }
 
+#daisy {
+  width: 200px;
+  height: 200px;
+}
+
 #info {
   position: absolute;
   top: 0;
