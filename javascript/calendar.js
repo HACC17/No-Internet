@@ -24,7 +24,7 @@ function handleClientLoad() {
  *  listeners.
  */
 function initClient() {
-  gapi.client.init({sss
+  gapi.client.init({
     discoveryDocs: DISCOVERY_DOCS,
     clientId: CLIENT_ID,
     scope: SCOPES
