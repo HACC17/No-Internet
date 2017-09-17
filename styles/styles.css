@@ -70,6 +70,7 @@ a:hover {
   left: 0;
   margin: auto;
   margin-top: 8%;
+  display: none;
 }
 
 #daisy {

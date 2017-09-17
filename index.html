@@ -67,5 +67,11 @@
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
   </script>
+  <script language="javascript">
+    $(document).ready(function() {
+      console.log("page has loaded");
+      $('div#welcomeScreen').fadeIn(2000);
+    });
+  </script>
 </body>
 </html>
