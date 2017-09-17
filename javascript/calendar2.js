@@ -1,6 +1,4 @@
-console.log("calendar");
-// Client ID and API key from the Developer Console
-var CLIENT_ID = '365997196332-m4ujgu7nm7pjqh71kkvfka0cilabb0rm.apps.googleusercontent.com';
+var CLIENT_ID2 = '93730433294-8t1lb93p2f3rtqpa1hbpm6np4bpae5m4.apps.googleusercontent.com';
 
 // Array of API discovery doc URLs for APIs used by the quickstart
 var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
@@ -9,8 +7,8 @@ var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/
 // included, separated by spaces.
 var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
 
-var authorizeButton = document.getElementById('authorize-button');
-var signoutButton = document.getElementById('signout-button');
+var authorizeButton2 = document.getElementById('authorize-button2');
+var signoutButton2 = document.getElementById('signout-button2');
 
 /**
  *  On load, called to load the auth2 library and API client library.
@@ -24,9 +22,9 @@ function handleClientLoad() {
  *  listeners.
  */
 function initClient() {
-  gapi.client.init({sss
+  gapi.client.init({
     discoveryDocs: DISCOVERY_DOCS,
-    clientId: CLIENT_ID,
+    clientId: CLIENT_ID2,
     scope: SCOPES
   }).then(function () {
     // Listen for sign-in state changes.
@@ -34,8 +32,8 @@ function initClient() {
 
     // Handle the initial sign-in state.
     updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-    authorizeButton.onclick = handleAuthClick;
-    signoutButton.onclick = handleSignoutClick;
+    authorizeButton2.onclick = handleAuthClick;
+    signoutButton2.onclick = handleSignoutClick;
   });
 }
 
@@ -45,26 +43,26 @@ function initClient() {
  */
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
-    authorizeButton.style.display = 'none';
-    signoutButton.style.display = 'block';
+    authorizeButton2.style.display = 'none';
+    signoutButton2.style.display = 'block';
     listUpcomingEvents();
   } else {
-    authorizeButton.style.display = 'block';
-    signoutButton.style.display = 'none';
+    authorizeButton2.style.display = 'block';
+    signoutButton2.style.display = 'none';
   }
 }
 
 /**
  *  Sign in the user upon button click.
  */
-function handleAuthClick(event) {
+function handleAuthClick(event2) {
   gapi.auth2.getAuthInstance().signIn();
 }
 
 /**
  *  Sign out the user upon button click.
  */
-function handleSignoutClick(event) {
+function handleSignoutClick(event2) {
   gapi.auth2.getAuthInstance().signOut();
 }
 
@@ -74,10 +72,10 @@ function handleSignoutClick(event) {
  *
  * @param {string} message Text to be placed in pre element.
  */
-function appendPre(message) {
-  var pre = document.getElementById('content');
-  var textContent = document.createTextNode(message + '\n');
-  pre.appendChild(textContent);
+function appendPre(message2) {
+  var pre2 = document.getElementById('content2');
+  var textContent2 = document.createTextNode(message2 + '\n');
+  pre2.appendChild(textContent2);
 }
 
 /**
@@ -85,7 +83,7 @@ function appendPre(message) {
  * the authorized user's calendar. If no events are found an
  * appropriate message is printed.
  */
-function listUpcomingEvents() {
+function listUpcomingEvents2() {
   gapi.client.calendar.events.list({
     'calendarId': 'primary',
     'timeMin': (new Date()).toISOString(),
@@ -93,18 +91,18 @@ function listUpcomingEvents() {
     'singleEvents': true,
     'maxResults': 10,
     'orderBy': 'startTime'
-  }).then(function(response) {
-    var events = response.result.items;
+  }).then(function(response2) {
+    var events2 = response2.result.items;
     appendPre('Upcoming events:');
 
-    if (events.length > 0) {
-      for (i = 0; i < events.length; i++) {
-        var event = events[i];
-        var when = event.start.dateTime;
-        if (!when) {
-          when = event.start.date;
+    if (events2.length > 0) {
+      for (i = 0; i < events2.length; i++) {
+        var event2 = events2[i];
+        var when2 = event2.start.dateTime;
+        if (!when2) {
+          when2 = event.start.date;
         }
-        appendPre(event.summary + ' (' + when + ')')
+        appendPre(event2.summary + ' (' + when2 + ')')
       }
     } else {
       appendPre('No upcoming events found.');

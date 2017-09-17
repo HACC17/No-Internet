@@ -55,13 +55,28 @@
       </div>
       <input type="text" id="input" value="">
     </div>  
-
-  </div> 
+  <div id="calContain">
+    <div id="calendar">
+      <p id="calTitle">Upcoming Events</p>
+      <button id="authorize-button">Load Events</button>
+      <pre id="content"></pre>
+    </div>
+    <div id="calendar2">
+      <p id="calTitle2">Your Calendar</p>
+      <button id="authorize-button2">Load Events</button>
+      <button id="signout-button2">Sign Out</button>
+      <pre id="content2"></pre>
+    </div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="javascript/app.js"></script>
   <script src="javascript/calendar.js"></script>
-
+  <script src="javascript/calendar2.js"></script>
+  <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
   <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
