@@ -1,3 +1,29 @@
-a:hover {
-	color: #9CBEBF;
+
+/* credit to https://github.com/daneden/animate.css/blob/master/animate.css */
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+#backToChat:hover {
+	animation: pulse 1s infinite;
+}
+
+#backToChat a:hover {
+  color: #9CBEBF;
+  transition: 0.3s;
+}
+
+.profile h4:hover {
+	animation: pulse 1s infinite;
+	transform-origin: center;
 }

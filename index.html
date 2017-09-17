@@ -17,10 +17,25 @@
       <li>
         <a href="html/about.html" target="_blank">About the Developers</a>
       </li>
+      <a href="https://github.com/HACC17/No-Internet" target="_blank"><img id="gitIcon" src="../images/github-icon.png"></a>
     </ul>
   </nav>
 
   <div id="container">
+    <div id="side-nav">
+      <div class="closeDiv" onclick="closeOverlay();"><div class="closeButton">&times;</div></div>
+      <div id="calendar">
+        <p id="calTitle">Google Calendar Quickstart</p>
+        <button id="authorize-button">Events</button>
+        <button id="signout-button">Sign Out</button>
+        <pre id="content"></pre>
+      </div>
+    </div>
+
+    <div id="overlayTab">
+      <img id="menu-icon" src="../images/menu-icon.png" onclick="openOverlay();">
+    </div>
+
     <div id="welcomeScreen">
         <div id="info">
           <h2>Say Hello To Daizzy<br/><span>Your Personal Chatbot For Scheduling</span></h2>
@@ -40,8 +55,6 @@
       </div>
       <input type="text" id="input" value="">
     </div>  
-  </div>
-
   <div id="calContain">
     <div id="calendar">
       <p id="calTitle">Upcoming Events</p>

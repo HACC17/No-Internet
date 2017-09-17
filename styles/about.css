@@ -2,20 +2,19 @@ html, body {
   font-family: 'Josefin Sans', sans-serif;
   margin: 0;
   padding: 0;
-
 }
 
 body {
-	background-color: #FCFDFF;
+  background-color: #FCFDFF;
 }
 
 #navigation {
-	width:100%;
-	height: 50px;
-	margin-bottom: 10px;
-	background-color: #0D3B66;	/* <- navy blue | med blue -> #69B3DB*/
-	display: flex;
-  	align-content: center;	
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  background-color: #0D3B66;	/* <- navy blue | med blue -> #69B3DB*/
+  display: flex;
+  align-content: center;
 }
 
 #navigation ul li {
@@ -26,47 +25,72 @@ body {
   align-content: center;
 }
 
+#backToChat a {
+  color: white;
+}
+
 a {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
 }
 
 #school-logo {
-	height: 14em;
-	width: 14em;
-	border-radius: 50%;
-	background-color: #FFF159;
-	display: block;
-	margin: 0 auto;
+  height: 14em;
+  width: 14em;
+  border-radius: 50%;
+  background-color: #FFF159;
+  display: block;
+  margin: 0 auto;
 }
 
 #container {
-	justify-content: center;
-	padding: 20px;
+  justify-content: center;
+  padding: 20px;
 }
 
 #profile-container {
-	display:flex;
-	flex-flow: column;
-	width: 100%;
-	height: 100%;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
 }
 
 #row-one, #row-two {
-	display:flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .profile {
-	flex-direction: column;
-	text-align: center;
-	width:15em;
+  flex-direction: column;
+  text-align: center;
+  width: 15em;
+}
+
+.profile h4 a {
+  color: black;
+}
+
+.profile ul {
+  list-style: none;
+  padding: 0;
+  list-style-type: none;
+}
+
+.profile ul li {
+  margin-bottom: 5px;
 }
 
 .circle {
-	height: 200px;
-	width: 200px;
-	border-radius: 50%;
-	background-color: #C9B7AD;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #C9B7AD;
+  transition: 0.3s;
+}
+
+.circle:hover {
+  border-radius: 40%;
+  border: 5px white solid;
+  box-sizing: border-box;
+  transition: 0.5s;
 }
