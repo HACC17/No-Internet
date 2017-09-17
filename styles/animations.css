@@ -72,8 +72,11 @@
   }
 }
 
-#daisy:hover {
+
+/*daisy rotates when mouse hovers button*/
+#startBtn:hover + #daisy {
   animation: spinOnce 0.9s ease-in-out ;
+  
 }
 
 @keyframes welcomeScreen {
