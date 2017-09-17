@@ -27,3 +27,10 @@
 	animation: pulse 1s infinite;
 	transform-origin: center;
 }
+
+.circle:hover {
+  border-radius: 40%;
+  border: 5px white solid;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
