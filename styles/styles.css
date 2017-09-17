@@ -238,6 +238,39 @@ input[type = text], select {
 
 /*Simple Media Queries*/
 
+@media only screen and (max-width: 1180px){
+  #info {
+    width: 65%;
+  }
+  #startBtn {
+    width: 43%;
+  }
+}
+
+@media only screen and (max-width: 930px) (min-width: 730px){
+  #info {
+    width: 80%;
+  }
+  #startBtn {
+    width: 43%;
+  }
+}
+
+@media only screen and (max-width: 730px){
+  #info {
+    width: 80%;
+  }
+  #startBtn {
+    width: 73%;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  #chat{
+    width: 90%;
+  }
+}
+
 
 /* ----------- Galaxy S5 ----------- */
     /* Portrait and Landscape */
@@ -263,7 +296,7 @@ input[type = text], select {
       width: 98%;
     }
     #calendar{
-      width: 9  5%;
+      width: 95%;
     }
 }
 
