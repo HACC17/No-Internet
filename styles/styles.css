@@ -141,7 +141,7 @@ a:hover {
   left: 0;
   display: none;
   width: 50%;
-  height: 600px;
+  height: 85%;
   margin: auto;
   margin-top: 95px;
   margin-bottom: 50px;
@@ -163,7 +163,7 @@ a:hover {
 #chatLog {
   box-sizing: border-box;
   width: 99.9%;
-  height: 540px;
+  height: 89%;
   padding: 20px;
   overflow: scroll;
   overflow-x: hidden;

@@ -15,3 +15,13 @@ $(document).ready(function() {
   	setTimeout(() => {$('#profile-container')[0].style.animationPlayState = "running";}, 1700);
   }, 300);
 });
+
+//easter egg
+function easterEgg(x){
+  let arr1 = [];
+  let arr2 = [1, 2, 3, 4, 5, 6, 7];
+  arr(x.push);
+  if(arr1 === arr2){
+    console.log("yay");
+  }
+}
