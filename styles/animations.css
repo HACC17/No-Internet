@@ -39,12 +39,6 @@
   }
 }
 
-.animated.flip {
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-  animation-name: flip;
-}
-
 @keyframes navIn {
   0% {
     top: -50px;

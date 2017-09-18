@@ -69,10 +69,6 @@ function addText() {//adds text from the textbox to the chatbox
   }else if(qNum === 1) {
     var name = $('#input')[0].value;
     volunteers[0]._name = name;
-    /*for (var i = 0; i < roles.length; i++) {
-      listRoles += "<br> -"+ roles[i].toLowerCase();
-    }*/
-    //use map instead
     //ADD conditional in here to check if their name is right
     if(name.includes('') && name.length > 0){ //checks if name was inputted
       botText("Is " + name + " the correct name?");
@@ -84,6 +80,10 @@ function addText() {//adds text from the textbox to the chatbox
     let userInput = $('#input')[0].value.toLowerCase();
     if(userInput.includes("yea") || userInput.includes("yes") || userInput.includes("yeah") || userInput.includes("correct")){
       var listRoles = "";
+      /*for (var i = 0; i < roles.length; i++) {
+        listRoles += "<br> -"+ roles[i].toLowerCase();
+      }*/
+      //use map instead
       roles.map((currVal, index) => listRoles += "<br> -" + roles[index].toLowerCase());
       botText("What role are you looking to volunteer for, "+volunteers[0]._name+"?<br><br>Current available roles:"+listRoles);
       qNum = 3;
