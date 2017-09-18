@@ -17,14 +17,11 @@ $(document).ready(function() {
 });
 
 //easter egg
-let arr1 = [];
-let arr2 = [1, 2, 3, 4, 5, 6];
 function easterEgg(x){
-  arr1.push(x);
-}
-
-function easterCheck(){
-  if(arr1.toString() == arr2.toString()){
-    
+  let arr1 = [];
+  let arr2 = [1, 2, 3, 4, 5, 6, 7];
+  arr(x.push);
+  if(arr1 === arr2){
+    console.log("yay");
   }
 }
