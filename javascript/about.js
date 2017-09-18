@@ -7,4 +7,11 @@ function openInNewTab(url) {
 }
 */
 
-
+$(document).ready(function() {
+  setTimeout(() => { 
+  	$('#navigation')[0].style.animationPlayState = "running";
+  	setTimeout(() => {$('#school-logo')[0].style.animationPlayState = "running";}, 800);
+  	setTimeout(() => {$('#information')[0].style.animationPlayState = "running";}, 1300);
+  	setTimeout(() => {$('#profile-container')[0].style.animationPlayState = "running";}, 1700);
+  }, 300);
+});

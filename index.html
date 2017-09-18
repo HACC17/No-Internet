@@ -11,19 +11,21 @@
 <body>
   <nav id="navigation">
     <ul>
-      <li>
+      <li id="first-child">
         <a href="http://elections.hawaii.gov/voters/volunteer/">Volunteer Website</a>
       </li>
       <li>
         <a href="html/about.html" target="_blank">About the Developers</a>
       </li>
-      <a href="https://github.com/HACC17/No-Internet" target="_blank"><img id="gitIcon" src="../images/github-icon.png"></a>
+      <div id="iconCorner">
+        <a href="https://github.com/HACC17/No-Internet" target="_blank"><img id="gitIcon" src="../images/github-icon.png"></a>
+      </div>
     </ul>
   </nav>
 
   <div id="container">
     <div id="side-nav">
-      <div class="closeDiv" onclick="closeOverlay();"><div class="closeButton">&times;</div></div>
+      <div id="closeButton">&times;</div>
       
       <div id="bothCals">
         <iframe src="https://calendar.google.com/calendar/embed?title=Hawaii%20Volunteer%20Schedule&amp;showPrint=0&amp;height=500&amp;wkst=1&amp;bgcolor=%2333ccff&amp;src=ueue2ffv31h1ilva2o1tmuthgs%40group.calendar.google.com&amp;color=%23691426&amp;ctz=Pacific%2FHonolulu" style="border-width:0" width="100%" height="500px" frameborder="0" scrolling="no"></iframe>

@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log($('#welcomeScreen'));
   $('#welcomeScreen').hide().delay(200).fadeIn(1000);
   setTimeout(() => { $('#navigation')[0].style.animationPlayState = "running";}, 500);
 });
@@ -20,8 +19,6 @@ function start() {
   setTimeout(() => {$('#chatTitle')[0].style.animationPlayState = "running";}, 2200);
   setTimeout(() => {$('#chatLog')[0].style.animationPlayState = "running";}, 2700);
   setTimeout(() => {$('#input')[0].style.animationPlayState = "running";}, 3000);
-  setTimeout(() => {$('#calendar')[0].style.animationPlayState = "running";}, 3000);
-
 }
 
 $(document).keypress(function(e) { //checks when user presses enter key
@@ -47,6 +44,13 @@ function botText(input) {
 }
 
 function addText() {//adds text from the textbox to the chatbox
+  setTimeout(() => {
+        if($(window).width() < 571) { //checks window
+          openOverlay(2);
+        }else{
+          openOverlay(1);
+        }
+      }, 1000);
   var userText = document.createElement("div");
   userText.className = "user";
   var text = document.createElement("p");
@@ -129,7 +133,13 @@ function addText() {//adds text from the textbox to the chatbox
     let userInput = $('#input')[0].value.toLowerCase();
     if(userInput.includes("yea") || userInput.includes("yes") || userInput.includes("yeah") || userInput.includes("correct")){
       botText("Here are the days we have available for that role");
-      setTimeout(() => {openOverlay();}, 1000);
+      setTimeout(() => {
+        if($(window).width() < 571) { //checks window
+          openOverlay(2);
+        }else{
+          openOverlay(1);
+        }
+      }, 1000);
       qNum = 5;
     }else if(userInput.includes("no") || userInput.includes("nope")){
       qNum = 3;
@@ -148,20 +158,56 @@ function addText() {//adds text from the textbox to the chatbox
 var name = "";
 var roles = ["CONTROL CENTER OPERATOR", "COUNTING CENTER OFFICIAL", "DELIVERY/COLLECTION OFFICIAL", "ELECTION INFORMATION SERVICES OFFICIAL","FACILITY OFFICIAL","PRECINCT OFFICIAL","PRECINCT TROUBLESHOOTER"];
 
-function openOverlay() {
-  $("#side-nav")[0].style.width = "40%";
-  $("#chat")[0].style.left = "40%";
-  setTimeout(() => {$('#overlayTab')[0].style.display = "none";}, 300);
-  setTimeout(() => {$('#overlayTab')[0].style.animationPlayState = "paused";}, 400);
+overlayMode = 0;
+function openOverlay(x) {
+  if(x === 2){ //open smaller overlay
+    $("#side-nav")[0].style.width = "100%";
+    setTimeout(() => {$("#side-nav")[0].style.height = "40%";}, 600); //needs to be delayed otherwise it will expand from corner
+    $("#chat")[0].style.top = "40%";
+    setTimeout(() => {$('#overlayTab')[0].style.display = "none";}, 700);
+    setTimeout(() => {$('#overlayTab')[0].style.animationPlayState = "paused";}, 400);
+    overlayMode = 1;
+  }else if(x === 1){ //open larger overlay
+    $("#side-nav")[0].style.height = "100%";
+    $("#side-nav")[0].style.width = "40%";
+    $("#chat")[0].style.left = "40%";
+    setTimeout(() => {$('#overlayTab')[0].style.display = "none";}, 300);
+    setTimeout(() => {$('#overlayTab')[0].style.animationPlayState = "paused";}, 400);
+  }
 }
 
-function closeOverlay() {
-  $("#side-nav")[0].style.width = "0";
-  $("#chat")[0].style.left= "0";
-  $('#overlayTab')[0].style.display = "inline";
-  setTimeout(() => {$('#overlayTab')[0].style.animationPlayState = "running";}, 700);
-
+function closeOverlay(x) {
+  if(x === 2){ //close smaller overlay
+    $("#side-nav")[0].style.height = "0";
+    $("#chat")[0].style.top= "0";
+    $('#overlayTab')[0].style.display = "inline";
+    setTimeout(() => {$("#side-nav")[0].style.width = "40%";}, 600);
+    setTimeout(() => {$('#overlayTab')[0].style.animationPlayState = "running";}, 700);
+    overlayMode = 0;
+  }else if(x === 1){ //close larger overlay
+    $("#side-nav")[0].style.width = "0";
+    $("#chat")[0].style.left= "0";
+    $('#overlayTab')[0].style.display = "inline";
+    setTimeout(() => {$('#overlayTab')[0].style.animationPlayState = "running";}, 700);
+  }
 }
+
+console.log($(window).width())
+$('#overlayTab').click(function(e) {  
+  if($(window).width() < 571) { //checks window
+    openOverlay(2);
+  }else{
+    openOverlay(1);
+  }
+});
+
+$('#closeButton').click(function(e) {  
+  if($(window).width() < 571 || overlayMode === 1) { //checks window
+    closeOverlay(2);
+  }else{
+    closeOverlay(1);
+  }
+});
 
 var volunteers = [];
 

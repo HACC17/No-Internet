@@ -1,7 +1,7 @@
 
 /* credit to https://github.com/daneden/animate.css/blob/master/animate.css */
 @keyframes pulse {
-  from {
+  0% {
     transform: scale3d(1, 1, 1);
   }
 
@@ -9,7 +9,7 @@
     transform: scale3d(1.05, 1.05, 1.05);
   }
 
-  to {
+  100% {
     transform: scale3d(1, 1, 1);
   }
 }
@@ -26,4 +26,83 @@
 .profile h4:hover {
 	animation: pulse 1s infinite;
 	transform-origin: center;
+}
+
+@keyframes zoomInUp {
+  0% {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+#navigation {
+  animation: zoomInUp 1s ease-out forwards paused;
+}
+
+@keyframes flipInX {
+  0% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  100% {
+    transform: perspective(400px);
+  }
+}
+
+#school-logo {
+  animation: flipInX 1s ease-out forwards paused;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+#information {
+  animation: fadeInUp 0.8s ease-out forwards paused;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+#profile-container {
+  animation: zoomIn 0.8s ease-in-out forwards paused;
 }

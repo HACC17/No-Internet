@@ -89,7 +89,6 @@
 /*daisy rotates when mouse hovers button*/
 #startBtn:hover + #daisy {
   animation: spinOnce 0.9s ease-in-out ;
-  
 }
 
 @keyframes welcomeScreen {
@@ -112,13 +111,12 @@
     height: 85%;
     border-radius: 10px;
     background-color: white;
-    
     top: 3%;
   }
 
   80% {
     border-radius: 0;
-    top: 0;
+    top: 4.5px;
   }
 
   100% {
@@ -126,12 +124,45 @@
     height: 85%;
     border-radius: 0;
     background-color: white;
-    top: 0;
+    top: 4.5px;
   }
 }
 
-#welcomeScreen {
-  animation: welcomeScreen 1.5s ease-out forwards paused;
+@keyframes welcomeScreenSmall { /*For smaller screen width*/
+  0% {
+    width: 95%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: rgba(85, 92, 99, 0.5);
+    top: 0;
+  }
+
+  20% {
+    width: 95%;
+    height: 90%;
+    top: 3%;
+  }
+
+  60% {
+    width: 465px;
+    height: 85%;
+    border-radius: 10px;
+    background-color: white;
+    top: 3%;
+  }
+
+  80% {
+    border-radius: 0;
+    top: 4.5px;
+  }
+
+  100% {
+    width: 465px;
+    height: 85%;
+    border-radius: 0;
+    background-color: white;
+    top: 4.5px;
+  }
 }
 
 @keyframes titleHeight {
@@ -188,7 +219,7 @@
   animation: fadeIn 1s ease-out forwards paused;
 }
 
-@keyframes overlayTab {
+@keyframes overlayTabLeft {
   0% {
     left: -40px;
   }
@@ -198,6 +229,12 @@
   }
 }
 
-#overlayTab {
-  animation: overlayTab 0.5s ease-out paused;
+@keyframes overlayTabTop {
+  0% {
+    top: -5px;
+  }
+
+  100% {
+    top: 23px;
+  }
 }
