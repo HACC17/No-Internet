@@ -44,13 +44,6 @@ function botText(input) {
 }
 
 function addText() {//adds text from the textbox to the chatbox
-  setTimeout(() => {
-        if($(window).width() < 571) { //checks window
-          openOverlay(2);
-        }else{
-          openOverlay(1);
-        }
-      }, 1000);
   var userText = document.createElement("div");
   userText.className = "user";
   var text = document.createElement("p");
