@@ -391,16 +391,28 @@ input[type = text], select {
   and (device-width: 360px) 
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) {
+    #info{
+      width: 80%;
+      height: 90%;
+    }
+    #iconCorner{
+      right: 150px;
+    }
+    a{
+      font-size: 12px;
+    }
     #startBtn{
-      width: 90%;
+      width: 100%;
     }
-    #calendar{
-      width: 85%;
+    #chat{
+      width: 80%;
+      height: 80%;
     }
+
 }
 
 /* ----------- iPhone 5 and 5S ----------- */
-         Portrait and Landscape 
+/*         Portrait and Landscape 
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
@@ -411,11 +423,11 @@ input[type = text], select {
     #calendar{
       width: 95%;
     }
-}
+}*/
 
 /* ----------- iPad 3 and 4 ----------- */
       /* Portrait and Landscape */
-@media only screen 
+/*@media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 2) {
@@ -435,4 +447,4 @@ input[type = text], select {
     #calendar{
       width: 70%;
     }
-}
+}*/
