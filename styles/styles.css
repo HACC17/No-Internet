@@ -109,7 +109,7 @@ a:hover {
 #startBtn {
   line-height: 40px;
   font-size: 17px;
-  width: 43%;
+  width: 245px;
   height: 40px;
   margin-right: auto;
   margin-left: auto;
@@ -163,7 +163,7 @@ a:hover {
 #chatLog {
   box-sizing: border-box;
   width: 99.9%;
-  height: 89%;
+  height: 87%;
   padding: 20px;
   overflow: scroll;
   overflow-x: hidden;
@@ -364,6 +364,18 @@ input[type = text], select {
   #overlayTab:hover #menu-icon {
     transform: rotate(90deg);
     transition: 0.3s;
+  }
+}
+
+@media only screen and (max-width: 520px){
+  #info {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 650px){
+  #info {
+    height: 390px;
   }
 }
 
