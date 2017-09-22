@@ -29,6 +29,14 @@ $(document).keypress(function(e) { //checks when user presses enter key
 var qNum = 0; //question number
 var questions = ["May I please have your name?","What role are you looking to volunteer for?"];
 
+class Volunteer{
+  constructor(name, age, role){
+    this._name = name;
+    this._age = age;
+    this._role = role;
+  }
+}
+
 function botText(input) {
   var userText = document.createElement("div");
   userText.className = "bot";
@@ -94,30 +102,37 @@ function addText() {//adds text from the textbox to the chatbox
   }else if(qNum === 3) {
     if ($('#input')[0].value.toLowerCase() === roles[0].toLowerCase()){
       botText("Are you sure you want to take the role of " + roles[0].toLowerCase() + "?");
+      Volunteer._role = roles[0].toLowerCase();
       qNum =4;
     }else if ($('#input')[0].value.toLowerCase() === roles[1].toLowerCase()){
       volunteers[0]._role = $('#input')[0].value.toLowerCase();
       botText("Are you sure you want to take the volunteer position of " + roles[1].toLowerCase() + "?");
+      Volunteer._role = roles[1].toLowerCase();
       qNum =4;
     }else if ($('#input')[0].value.toLowerCase() === roles[2].toLowerCase()){
       volunteers[0]._role = $('#input')[0].value.toLowerCase();
       botText("Are you sure you want to take the volunteer position of " + roles[2].toLowerCase() + "?");
+      Volunteer._role = roles[2].toLowerCase();
       qNum =4;
     }else if ($('#input')[0].value.toLowerCase() === roles[3].toLowerCase()){
       volunteers[0]._role = $('#input')[0].value.toLowerCase();
       botText("Are you sure you want to take the volunteer position of " + roles[3].toLowerCase() + "?");
+      Volunteer._role = roles[3].toLowerCase();
       qNum =4;
     }else if ($('#input')[0].value.toLowerCase() === roles[4].toLowerCase()){
       volunteers[0]._role = $('#input')[0].value.toLowerCase();
       botText("Are you sure you want to take the volunteer position of " + roles[4].toLowerCase() + "?");
+      Volunteer._role = roles[4].toLowerCase();
       qNum =4;
     }else if ($('#input')[0].value.toLowerCase() === roles[5].toLowerCase()){
       volunteers[0]._role = $('#input')[0].value.toLowerCase();
       botText("Are you sure you want to take the volunteer position of " + roles[5].toLowerCase() + "?");
+      Volunteer._role = roles[5].toLowerCase();
       qNum =4;
     }else if ($('#input')[0].value.toLowerCase() === roles[6].toLowerCase()){
       volunteers[0]._role = $('#input')[0].value.toLowerCase();
       botText("Are you sure you want to take the volunteer position of " + roles[6].toLowerCase() + "?");
+      Volunteer._role = roles[6].toLowerCase();
       qNum =4;
     }else{
       botText("That volunteer role does not exist. Please try again and type the role as seen above");
@@ -133,6 +148,7 @@ function addText() {//adds text from the textbox to the chatbox
           openOverlay(1);
         }
       }, 1000);
+      setTimeout(() => {botText("What date works best for you? Please input the date in the format MM/DD/YYYY");}, 1500);
       qNum = 5;
     }else if(userInput.includes("no") || userInput.includes("nope")){
       qNum = 3;
@@ -141,7 +157,19 @@ function addText() {//adds text from the textbox to the chatbox
       botText("Plase pick a role:"+listRoles);
     }
   }else if(qNum === 5){
-
+    let userInput = $('#input')[0].value.toLowerCase();
+    if(userInput.includes('') && userInput.length === 10){
+      botText("Is this date, " + userInput + " the correct day you would like to volunteer for the role, " + Volunteer._role + "?");
+      qNum = 6;
+    }else{
+      botText(userInput + " Is not a real date or not properly formatted, please try again");
+    }
+  }else if(qNum === 6){
+    let userInput = $('#input')[0].value.toLowerCase();
+    if(userInput.includes("yea") || userInput.includes("yes") || userInput.includes("yeah") || userInput.includes("correct")){
+      botText("Thank you for scheduling with me! If you ever need to change your volunteer date, re-enter your name when signing up and our system will automatically recoginze you. Have a good day!");
+      setTimeout(() => location.reload(), 10000);
+    }
   }
 
   $('#input')[0].value = ''; //clears textboxt after enter
@@ -203,11 +231,3 @@ $('#closeButton').click(function(e) {
 });
 
 var volunteers = [];
-
-class Volunteer{
-  constructor(name, age, role){
-    this._name = name;
-    this._age = age;
-    this._role = role;
-  }
-}
